@@ -1,0 +1,10 @@
+<%= form_for(@review) do |f|%>
+  <%= f.lable :comment %>
+  <%= f.area_field :comment %>
+  <br>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+  <%= f.label :book_id %>
+  <%= f.collection_select :book_id, Book.all, :id, :name %>
+  <%= f.submit %>
+<%= end %>

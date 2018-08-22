@@ -1,0 +1,16 @@
+<%= form_for(@book) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+  <br>
+  <%= f.label :publisher %>
+  <%= f.text_field :publisher %>
+  <br>
+  <%= f.label :genre %>
+  <%= f.text_field :genre %>
+  <br>
+  <h4>Upload photo</h4><%= f.input %>
+  <%= f.submit %>
+  <% end  %>
