@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :authorized 
 
   def show
     @review = Review.find(params[:id])
@@ -32,7 +33,7 @@ class ReviewsController < ApplicationController
 
   def destroy
     Review.destroy(params[:id])
-    redirect_to reviews_path #i want to redirect to the current user's page but i need to know more about authentication to do that. 
+    redirect_to reviews_path #i want to redirect to the current user's page but i need to know more about authentication to do that.
   end
 
   private
