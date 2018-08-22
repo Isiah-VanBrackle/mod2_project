@@ -1,7 +1,1 @@
-<%= @user.username %>
-<%= @user.books.each do |book| %>
-<%= link_to book.title, book_path(book) %>
-<% end %>
 
-<%= link_to '<button type="button">Add Book</button>'.html_safe new_book_path %>
-<%= link_to '<button type="button">New Review</button>'.html_safe new_review_path %>
