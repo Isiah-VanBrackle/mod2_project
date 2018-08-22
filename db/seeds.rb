@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 100. times do
   Book.create(title: Faker::Book.title, author: Faker::Book.author, publisher: Faker::Book.publisher, genre: Faker::Book.genre)
-end 
+end

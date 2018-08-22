@@ -8,6 +8,6 @@ class User < ApplicationRecord
   validates :password, presence: true
   validates :username, uniqueness: true
   validates :email, uniqueness: true
-  validates :password, uniqueness: true 
+  validates :password, uniqueness: true
 
 end
