@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_action :authorized, only: [:show, :new, :create]
 
   def index
-    @books = Book.all
+    @books = Book.with_attached_image
   end
 
   def show
@@ -24,7 +24,7 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:title, :author, :publisher, :genre, :img_url)
+    params.require(:book).permit(:title, :author, :publisher, :genre, :image)
   end
 
   # this comment marks the end of the class
