@@ -1,2 +1,10 @@
 <h1>Books#show</h1>
 <p>Find me in app/views/books/show.html.erb</p>
+<% if @book.image.attached? %>
+<!-- @post.image.present? will always return true, use attached? to check presence -->
+ <p>
+   <strong>Image:</strong>
+   <br>
+   <%= image_tag @book.image %>
+ </p>
+<% end %>
