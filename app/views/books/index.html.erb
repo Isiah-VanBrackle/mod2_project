@@ -14,7 +14,7 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal" style="margin-bottom:30px;">
         Details
       </button>
-       <%= book.reviews.each do |review| %>
+       <% book.reviews.each do |review| %>
         <%= review.rating.to_i.times do  %>
         <span class="glyphicon glyphicon-star"></span>
          <% end %>
