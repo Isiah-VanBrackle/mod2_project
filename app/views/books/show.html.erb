@@ -1,8 +1,8 @@
 <% if @book.image.attached? %>
 <!-- @post.image.present? will always return true, use attached? to check presence -->
-  <p>
+  <div style="align:center">
     <strong>Image:</strong>
     <br>
     <%= image_tag @book.image %>
-  </p>
+  </div>
 <% end %>
