@@ -14,9 +14,12 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal" style="margin-bottom:30px;">
         Details
       </button>
-       <%= book.rating.to_i.times do  %>
+       <%= book.reviews.each do |review| %>
+        <%= review.rating.to_i.times do  %>
         <span class="glyphicon glyphicon-star"></span>
+         <% end %>
         <% end %>
+
 
       <!-- Modal -->
       <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
