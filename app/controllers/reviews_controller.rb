@@ -1,21 +1,26 @@
 class ReviewsController < ApplicationController
-  before_action :authorized 
+  before_action :authorized
 
   def show
     @review = Review.find(params[:id])
   end
 
   def new
-    @review = Review.new
+    @review = current_user.reviews.build
   end
 
   def create
-    @review = Review.new(review_params)
+    @review = current_user.reviews.build(review_params)
+
+    respond_to do |format|
       if @review.save
-        redirect_to review_path(@review)
+        format.html {redirect_to review_path(@review), notice: 'Your review was successfully created.' }
+        format.json {render :show, status: :created, location: @review }
       else
-        render :new
+        format.html {render :new}
+        format.json {render json: @review.errors, status: :unprocessable_entity}
       end
+    end 
   end
 
   def edit
