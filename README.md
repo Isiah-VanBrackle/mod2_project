@@ -1,24 +1,22 @@
-# README
+# J-IV
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+J-IV is a rails web application. It allows a user to find books by their category and review them. See the reviews other users have created. And submit new books to be reviewed.
 
-Things you may want to cover:
+# Installation Instructions
 
-* Ruby version
+1. Run 'bundle install'
+2. Run 'rake db:migrate'
+3. Run 'rake db:seed'
+4. Start up you local server with 'rails s'
+5. Head over to http://localhost:3000/books in your browser
+6. CONGRATS!!! once you get to this point it's a simple matter of signing up and getting started.
 
-* System dependencies
+# Contributor's Guide
 
-* Configuration
+Below are the gems we couldn't have done this without
+*faker*
+*bcrypt*
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#license Link
+https://opensource.org/licenses/MIT
+* Ruby version 2.4.4
