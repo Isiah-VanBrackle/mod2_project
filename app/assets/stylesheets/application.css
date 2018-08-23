@@ -15,12 +15,20 @@
  */
 
  body {
-     background: oldlace;
+     background: rgb(173, 155, 119);
+     opacity:50%;
  }
 
  #row-img{
     margin-top : 15px;
+    background : white;
+    margin-left: 15px;
 
+ }
+
+ #row-img img{
+  height:200px;
+  width:200px;
  }
 
  #img-btns{
@@ -69,3 +77,19 @@
       color: $state-danger-text;
     }
   }
+
+  .container-fluid{
+    background:navy;
+    color: white;
+    font-size: 20px;
+  }
+
+  a:hover{
+    background: #bbb;
+  }
+
+ img{
+   height:200px;
+   width:200px;
+   background: white;
+ }

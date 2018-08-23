@@ -3,15 +3,15 @@
   <% @books.each_slice(3)  do |books| %>
     <div class="row">
     <% books.each  do |book| %>
-      <div class="col-sm-6 col-lg-4" id="row-img">
-      <img src="/images/book-1.jpg" class="img-responsive" id="display-book-main">
+      <div class="col-sm-3 col-lg-3" id="row-img">
+  <%= image_tag(book.image, :class => "image-responsive") %>
         <h2><%= book.title %></h2>
         <h6><%= book.author %></h6>
         <p> <%= book.publisher %></p>
         <p> <%= book.genre %></p>
         <br><br>
         <div id="img-btns">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal" style="margin-bottom:30px;">
         Details
       </button>
 

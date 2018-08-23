@@ -1,5 +1,8 @@
 class ReviewsController < ApplicationController
   before_action :authorized
+  def  index 
+    @reviews = Review.all
+  end 
 
   def show
     @review = Review.find(params[:id])
@@ -11,17 +14,16 @@ class ReviewsController < ApplicationController
 
   def create
     @review = current_user.reviews.build(review_params)
+    #byebug
 
-    respond_to do |format|
+    
       if @review.save
-        format.html {redirect_to review_path(@review), notice: 'Your review was successfully created.' }
-        format.json {render :show, status: :created, location: @review }
+        redirect_to @review 
       else
-        format.html {render :new}
-        format.json {render json: @review.errors, status: :unprocessable_entity}
+        render :new
+       
       end
     end 
-  end
 
   def edit
     @review = Review.find(params[:id])
@@ -43,7 +45,7 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-    params.require(:review).permit(:comment, :rating)
+    params.require(:review).permit(:comment, :rating, :book_id)
   end
   # this comment marks the end of the class
 end
