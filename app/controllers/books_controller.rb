@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_action :authorized, only: [:show, :new, :create]
 
   def index
-    @books = Book.all
+    @books = Book.with_attached_image
   end
 
   def show
