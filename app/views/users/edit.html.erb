@@ -1,16 +1,22 @@
-<h3>Edit or Delete your Account<h3>
-<%= form_for(@user) do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <br>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <br>
-  <%= f.label :password %>
-  <%= f.text_field :password %>
-  <br>
-  <%= f.submit "Edit your Account Information" %>
-<% end %>
-<%= form_tag user_path(@user), method: 'delete' do %>
-  <%= submit_tag "Delete your Account" %>
-<% end %>
+<% provide(:title, 'Edit') %>
+<h3>Edit or Delete your Account</h3>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+      <%= f.label :username %>
+      <%= f.text_field :username, class: 'form-control' %>
+     <br>
+      <%= f.label :email %>
+      <%= f.text_field :email, class: 'form-control' %>
+     <br>
+      <%= f.label :password %>
+      <%= f.text_field :password, class: 'form-control' %>
+     <br>
+      <%= f.submit "Edit your Account Information", class: "btn btn-primary" %>
+    <% end %>
+      <%= form_tag user_path(@user), method: 'delete' do %>
+      <%= submit_tag "Delete your Account", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

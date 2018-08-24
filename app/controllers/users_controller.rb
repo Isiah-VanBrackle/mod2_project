@@ -5,8 +5,8 @@ class UsersController < ApplicationController
 
 
   def  index
-    @users = User.all 
-  end 
+    @users = User.all
+  end
 
 
   def show
@@ -41,8 +41,7 @@ class UsersController < ApplicationController
 
   def destroy
     User.destroy(params[:id])
-    redirect_to
-
+    redirect_to login_path
   end
 
   private

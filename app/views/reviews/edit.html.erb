@@ -1,10 +1,22 @@
-<%= form_for(@review) do |f|%>
-  <%= f.lable :comment %>
-  <%= f.area_field :comment %>
-  <br>
-  <%= f.label :rating %>
-  <%= f.number_field :rating %>
-  <%= f.label :book_id %>
-  <%= f.collection_select :book_id, Book.all, :id, :name %>
-  <%= f.submit %>
-<%= end %>
+<% provide(:title, 'Edit your Review') %>
+<h1>Edit your Review</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@review) do |f|%>
+      <%= f.label :comment %>
+      <%= f.text_area :comment, class: 'form-control' %>
+      <br>
+      <%= f.label :rating %>
+      <%= f.number_field :rating, class: 'form-control' %>
+      <br>
+      <%= f.label :book_id %>
+      <%= f.collection_select :book_id, Book.all, :id, :title, class: 'form-control' %>
+      <br>
+      <%= f.submit "Edit your Review", class: "btn btn-primary" %>
+    <% end %>
+    <%= form_tag review_path(@review), method: 'delete' do %>
+    <%= submit_tag "Delete your Review", class: "btn btn-primary" %>
+  <% end %>
+  </div>
+</div>
