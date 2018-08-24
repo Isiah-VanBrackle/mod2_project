@@ -1,2 +1,27 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<% provide(:title, 'Edit a Book') %>
+<h1>Edit a Book</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @book do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+      <br>
+      <%= f.label :author %>
+      <%= f.text_field :author, class: 'form-control' %>
+      <br>
+      <%= f.label :publisher %>
+      <%= f.text_field :publisher, class: 'form-control' %>
+      <br>
+      <%= f.label :genre %>
+      <%= f.text_field :genre, class: 'form-control' %>
+      <br>
+      <%= f.label :image %>
+      <%= f.file_field :image, class: 'form-control' %>
+      <%= f.submit "Edit a Book", class: "btn btn-primary"%>
+    <% end  %>
+      <%= form_tag book_path(@book), method: 'delete' do %>
+      <%= submit_tag "Delete this Book", "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
