@@ -19,10 +19,11 @@
     opacity:50%;
 }
 
-#row-img{
-   margin-top : 15px;
-   background : white;
-   margin-left: 15px;
+ #row-img{
+    margin-top : 15px;
+    background : white;
+    margin-left: 15px;
+    margin-bottom: 30px;
 
 }
 
@@ -71,25 +72,65 @@ input, textarea, select, .uneditable-input {
    }
  }
 
- .field_with_errors {
-   @extend .has-error;
-   .form-control {
-     color: $state-danger-text;
-   }
+ #mh{
+     background: navy;
  }
 
- .container-fluid{
-   background:navy;
-   color: white;
-   font-size: 20px;
+ .modal-footer{
+     background:navy;
  }
 
- a:hover{
-   background: #bbb;
+ 
+  #error_explanation {
+    color: red;
+    ul {
+      color: red;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  .field_with_errors {
+    @extend .has-error;
+    .form-control {
+      color: $state-danger-text;
+    }
+  }
+
+  .container-fluid{
+    background:navy;
+    color: white;
+    font-size: 20px;
+  }
+
+  a:hover{
+    background: #bbb;
+  }
+
+ img{
+   height:200px;
+   width:200px;
+   background: white;
  }
 
-img{
-  height:200px;
-  width:200px;
-  background: white;
+
+ .star-color{
+   color: yellow;
+   height: 18px;
+ }
+
+ .review_image{
+   margin:50%;
+ }
+
+#main_books_div{
+  margin-bottom:30px;
+}
+
+ footer {
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+  background:navy;
+  color:white;
 }

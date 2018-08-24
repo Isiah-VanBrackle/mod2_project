@@ -1,7 +1,21 @@
+<div class="container">
+<center>
 <%= image_tag(@review.book.image, :class => "image-responsive") %>
 <br>
-<%= @review.book.title %>
+
+<h2>  <%= @review.book.title %></h2>
+
 <br>
-<%= @review.rating %>
 <br>
-<%= @review.comment %>
+<h3> <%= @review.book.author%></h3>
+<br>
+<br>
+ <%= @review.rating.times do  %>
+    <span class="glyphicon glyphicon-star star-color"></span>
+    <% end %>
+
+<br><br>
+
+<h4 id=""><%= @review.comment %></h6>
+</center>
+</div>
