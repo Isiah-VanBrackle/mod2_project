@@ -2,7 +2,10 @@ class BooksController < ApplicationController
   before_action :authorized, only: [:show, :new, :create]
 
   def index
-    @books = Book.all #with_attached_image
+    @books = Book.all
+    
+    
+    #with_attached_image
   end
 
   def show
@@ -39,6 +42,8 @@ class BooksController < ApplicationController
     Book.destroy(params[:id])
     redirect_to books_path
   end
+
+  
 
   private
   def book_params

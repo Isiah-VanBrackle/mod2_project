@@ -11,17 +11,22 @@
         <p> <%= book.genre %></p>
         <br><br>
         <div id="img-btns">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bsicExampleModal" style="margin-bottom:30px;">
-        Details
-      </button>
-       <% book.reviews.each do |review| %>
-        <%= review.rating.to_i.times do  %>
-        <span class="glyphicon glyphicon-star"></span>
-         <% end %>
+        <% if !book.reviews.empty? %>
+        <% book.avg_star_rating.times do %>
+        
+          <span class="glyphicon glyphicon-star star-color"></span>
+          
+          <% end %>
+        <%= link_to "Book Review", book_path(book), class:"btn btn-primary", style: "margin-bottom:30px;" %>
+         <% else %>
+         <%= link_to "ADD Review", new_review_path(book), class:"btn btn-primary", style: "margin-bottom:30px;" %>
+        
         <% end %>
+    
+       
 
 
-      <!-- Modal -->
+      
       <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">

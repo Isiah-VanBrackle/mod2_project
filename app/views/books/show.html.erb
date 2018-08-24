@@ -6,3 +6,9 @@
     <%= image_tag @book.image %>
   </div>
 <% end %>
+
+
+<% @book.reviews.each do |b|%>
+  <%= b.comment %>
+  <%= b.rating %>
+  <% end %>

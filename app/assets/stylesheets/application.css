@@ -17,6 +17,8 @@
  body {
     background: rgb(173, 155, 119);
     opacity:50%;
+    height: 845px;
+    margin: 0%;
 }
 
  #row-img{
@@ -46,7 +48,7 @@
 }
 
 #mh{
-    background:#103166;
+    background:navy;
 }
 
 .modal-footer{
@@ -115,7 +117,8 @@ input, textarea, select, .uneditable-input {
 
  .star-color{
    color: yellow;
-   height: 18px;
+   font-size: 30px;
+   margin-left: 25px;
  }
 
  .review_image{
@@ -124,6 +127,11 @@ input, textarea, select, .uneditable-input {
 
 #main_books_div{
   margin-bottom:30px;
+}
+
+.move{
+  margin-left:25%;
+
 }
 
  footer {
