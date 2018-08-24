@@ -1,22 +1,20 @@
 
-<div class="container">
+<div class="container" >
   <% @books.each_slice(3)  do |books| %>
     <div class="row">
     <% books.each  do |book| %>
       <div class="col-sm-3 col-lg-3" id="row-img">
   <%= image_tag(book.image, :class => "image-responsive") %>
-        <h2><%= book.title %></h2>
-        <h6><%= book.author %></h6>
+        <h3><%= book.title %></h3>
+        <h3><%= book.author %></h3>
         <p> <%= book.publisher %></p>
         <p> <%= book.genre %></p>
         <br><br>
         <div id="img-btns">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal" style="margin-bottom:30px;">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bsicExampleModal" style="margin-bottom:30px;">
         Details
       </button>
-       <%= book.rating.to_i.times do  %>
-        <span class="glyphicon glyphicon-star"></span>
-        <% end %>
+      
 
       <!-- Modal -->
       <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -29,7 +27,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <h3>Sorry MOFO, You cant look at this</h3>
+              <h3>Sorry, You cant look at this</h3>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

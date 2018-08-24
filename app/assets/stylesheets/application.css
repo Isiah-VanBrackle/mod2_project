@@ -23,14 +23,11 @@
     margin-top : 15px;
     background : white;
     margin-left: 15px;
+    margin-bottom: 30px;
 
  }
 
- #row-img img{
-  height:200px;
-  width:200px;
- }
-
+ 
  #img-btns{
 
  }
@@ -45,24 +42,14 @@
  }
 
  #mh{
-     background:#103166;
+     background: navy;
  }
 
  .modal-footer{
-     background:#918b87;
+     background:navy;
  }
 
- input, textarea, select, .uneditable-input {
-    border: 1px solid #bbb;
-    width: 100%;
-    margin-bottom: 15px;
-    @include box_sizing;
-  }
-
-  input {
-    height: auto !important;
-  }
-
+ 
   #error_explanation {
     color: red;
     ul {
@@ -93,3 +80,26 @@
    width:200px;
    background: white;
  }
+
+
+ .star-color{
+   color: yellow;
+   height: 18px;
+ }
+
+ .review_image{
+   margin:50%;
+ }
+
+#main_books_div{
+  margin-bottom:30px;
+}
+
+ footer {
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+  background:navy;
+  color:white;
+}

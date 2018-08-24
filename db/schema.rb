@@ -35,20 +35,12 @@ ActiveRecord::Schema.define(version: 2018_08_23_180823) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
+    t.string "description"
     t.string "author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "publisher"
     t.string "genre"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "reviews", force: :cascade do |t|
-    t.string "comment"
-    t.integer "rating"
-    t.integer "user_id"
-    t.integer "book_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
